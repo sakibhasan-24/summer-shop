@@ -46,8 +46,7 @@ for (let i = 0; i < allItems.length; i++) {
       totalPrice < 200 ? Number(totalPrice).toFixed(2) : withDiscountAmount;
     couponBtn.addEventListener("click", function () {
       if (promoCodeInput.value === "SELL200") {
-        discount.innerText =
-          Number(discountPreviousValue) + Number(discountValue);
+        discount.innerText = setDiscount;
         allTotal.innerText = withDiscountAmount - discountValue;
       } else {
         promoCodeInput.value = "";
