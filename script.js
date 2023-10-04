@@ -1,13 +1,15 @@
 const promoCodeInput = document.getElementById("input-promo-code");
-// console.log(promoCodeInput.value);
 const couponBtn = document.getElementById("coupon-btn");
 const allItems = document.querySelectorAll(".all-items");
 const selectedItems = document.getElementById("items-selected");
 const total = document.getElementById("total-price");
 const allTotal = document.getElementById("total");
-// console.log(allTotal);
+
 const makePurchaseBtn = document.getElementById("make-purchase-btn");
 const discount = document.getElementById("discount");
+const purchaseModal = document.getElementById("purchase-confirm");
+const close = document.getElementById("close");
+const allSection = document.getElementById("all-section");
 let allTotalPrice = Number(allTotal.innerText);
 let totalPrice = Number(total.innerText);
 
@@ -34,6 +36,7 @@ for (let i = 0; i < allItems.length; i++) {
           discount.innerText = Number(discountValue).toFixed(2);
           let newTotal = Number(totalPrice) - discountValue;
           allTotalPrice += Number(price[i].innerText);
+
           return (allTotal.innerText = Number(newTotal).toFixed(2));
         } else {
           return alert("not correct");
@@ -48,6 +51,16 @@ for (let i = 0; i < allItems.length; i++) {
     if (totalPrice > 0) {
       makePurchaseBtn.classList.add("opacity-100");
       makePurchaseBtn.removeAttribute("disabled", true);
+      makePurchaseBtn.addEventListener("click", function () {
+        allTotal.innerText = 0;
+        total.innerText = 0;
+        discount.innerText = 0;
+        purchaseModal.classList.remove("hidden");
+        purchaseModal.classList.add("visible");
+        allSection.classList.add("opacity-0");
+        return (selectedItems.innerText = "");
+        // return alert("we received");
+      });
     }
 
     const count = selectedItems.childElementCount;
@@ -64,3 +77,8 @@ for (let i = 0; i < allItems.length; i++) {
     selectedItems.appendChild(p);
   });
 }
+close.addEventListener("click", function () {
+  purchaseModal.classList.add("hidden");
+  allSection.classList.add("opacity-100");
+  allSection.classList.remove("opacity-0");
+});
