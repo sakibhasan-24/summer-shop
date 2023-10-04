@@ -4,7 +4,6 @@ const allItems = document.querySelectorAll(".all-items");
 const selectedItems = document.getElementById("items-selected");
 const total = document.getElementById("total-price");
 const allTotal = document.getElementById("total");
-
 const makePurchaseBtn = document.getElementById("make-purchase-btn");
 const discount = document.getElementById("discount");
 const purchaseModal = document.getElementById("purchase-confirm");
@@ -27,6 +26,7 @@ for (let i = 0; i < allItems.length; i++) {
 
     allTotalPrice += Number(price[i].innerText);
     allTotal.innerText = Number(allTotalPrice).toFixed(2);
+
     if (totalPrice >= 200) {
       couponBtn.removeAttribute("disabled", true);
       couponBtn.classList.add("opacity-100");
@@ -39,7 +39,8 @@ for (let i = 0; i < allItems.length; i++) {
 
           return (allTotal.innerText = Number(newTotal).toFixed(2));
         } else {
-          return alert("not correct");
+          promoCodeInput.value = "";
+          return (discount.innerText = "inValid Coupoun!! try Again");
         }
       });
     } else {

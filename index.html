@@ -51,14 +51,18 @@
 
     <!-- main -->
     <main id="all-section" class="w-5/6 mx-auto my-12">
-      <section class="grid grid-cols-5">
-        <div class="col-span-4">
+      <section class="grid grid-cols-1 lg:grid-cols-5">
+        <div class="lg:col-span-4 order-last lg:order-first">
           <div class="flex flex-col gap-4">
             <div>
               <h1 class="text-4xl font-bold">KitchenWare</h1>
             </div>
-            <div class="grid grid-cols-3 col-span-3 gap-24">
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-3 gap-24"
+            >
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod1.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -80,7 +84,9 @@
                 </div>
               </div>
               <!-- second -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod2.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -102,7 +108,9 @@
                 </div>
               </div>
               <!-- third -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod3.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -130,8 +138,12 @@
             <div>
               <h1 class="text-4xl font-bold">SportsWare</h1>
             </div>
-            <div class="grid grid-cols-3 col-span-3 gap-24">
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-3 gap-24"
+            >
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod4.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -153,7 +165,9 @@
                 </div>
               </div>
               <!-- second -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod5.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -175,7 +189,9 @@
                 </div>
               </div>
               <!-- third -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod6.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -202,8 +218,12 @@
             <div>
               <h1 class="text-4xl font-bold">Furniture</h1>
             </div>
-            <div class="grid grid-cols-3 col-span-3 gap-24">
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 col-span-3 gap-24"
+            >
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod7.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -230,7 +250,9 @@
                 </div>
               </div>
               <!-- second -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod8.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -252,7 +274,9 @@
                 </div>
               </div>
               <!-- third -->
-              <div class="w-72 shadow-lg p-3 cursor-pointer border-2 all-items">
+              <div
+                class="lg:w-72 md:w-full shadow-lg p-3 cursor-pointer border-2 all-items"
+              >
                 <img
                   src="images/prod9.png"
                   class="mx-auto bg-gray-200 py-2 px-10 rounded-lg"
@@ -277,7 +301,7 @@
           </div>
         </div>
 
-        <div class="col-span-1 ml-20">
+        <div class="md:col-span-1 lg:col-span-1 ml-20">
           <div class="mt-20">
             <h3 class="text-center font-bold">Have Coupun?</h3>
             <div class="flex gap-1">
@@ -296,7 +320,7 @@
               </button>
             </div>
             <div id="items-selected"></div>
-            <div class="shadow-md pl-2 py-6 text-1xl ml-2 w-[200px]">
+            <div class="shadow-md pl-2 py-6 text-1xl w-[200px]">
               <p class="font-bold">
                 Total Price :
                 <span id="total-price" class="text-gray-500">0</span>
