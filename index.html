@@ -32,9 +32,8 @@
             <button
               id="btn-promocode"
               class="m-4 bg-[#E527B2] cursor-pointer hover:bg-[#e52769] text-white py-1 font-bold px-10 rounded-lg"
-              disabled
             >
-              Sell 200
+              SELL200
             </button>
           </h3>
         </div>
@@ -285,19 +284,19 @@
               <input
                 type="text"
                 name=""
-                id="coupun-code"
+                id="input-promo-code"
                 class="w-[120px] px-2 py-1 border-2 border-gray-300 my-3 rounded-lg"
               />
               <button
                 disabled
                 id="coupon-btn"
-                class="bg-[#E527B2] text-white font-bold h-10 mt-2 px-4 rounded-xl cursor-pointer"
+                class="bg-[#E527B2] text-white font-bold btn h-10 mt-2 px-4 rounded-xl cursor-pointer opacity-25"
               >
                 Apply
               </button>
             </div>
             <div id="items-selected"></div>
-            <div class="shadow-md px-2 py-6 text-1xl">
+            <div class="shadow-md pl-2 py-6 text-1xl ml-2 w-[200px]">
               <p class="font-bold">
                 Total Price :
                 <span id="total-price" class="text-gray-500">0</span>
@@ -308,6 +307,13 @@
               <p class="font-bold">
                 Total : <span class="text-gray-500" id="total">0</span>
               </p>
+              <button
+                disabled
+                id="make-purchase-btn"
+                class="bg-[#E527B2] text-white font-bold btn h-10 mt-2 px-4 rounded-xl cursor-pointer opacity-25"
+              >
+                Make Purchase
+              </button>
             </div>
           </div>
         </div>
